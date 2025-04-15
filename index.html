@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakura Engine Visaul Novel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+<!-- Sakura petals -->
+<script>
+  for (let i = 0; i < 30; i++) {
+    let sakura = document.createElement('div');
+    sakura.classList.add('sakura');
+    sakura.style.left = Math.random() * 100 + 'vw';
+    sakura.style.animationDuration = (5 + Math.random() * 5) + 's';
+    sakura.style.opacity = Math.random();
+    document.body.appendChild(sakura);
+  }
+</script>
+
+<!-- promociones -->
+ <div class="a1">
+  <div class="ofertas">
+    <img src="https://i.namu.wiki/i/o_QoZBqSn0OEB-WnzvWH01ti4uWsFmZjpvgAVX1B6Vlt0WXwqDNd_fxLHVUG_Ig3hf_J_qlkw4jWB9Ebd9JkaQ.svg" alt="" width="100%" height="100%">
+  </div>
+ </div>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sakura Engine visual Novel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#download">Descargas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#community">Comunidad</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container text-center">
+    <div class="hero-content" data-aos="fade-up">
+      <!--<h1 class="display-4">ようこそ、さくらエンジンへ</h1>-->
+      <!--<p class="lead">まるでアニメのようなビジュアルノベルを、誰でも簡単に。</p>-->
+      <a href="#download" class="btn btn-sakura">Descargar ahora</a>
+      <a href="public/views/docs.html" class="btn btn-outline-dark">Documento</a>
+    </div>
+  </div>
+</header>
+
+<section class="section text-center" id="features">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Caracteristicas</h2>
+    <div class="row mt-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <h4>🎨 Interfaces</h4>
+        <p>
+          Diseña libremente la interfaz para tu juego o novela visual sin restricciones.
+        </p>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <h4>⚙ Motor Liviano</h4>
+        <p>
+          Este motor está diseñado para ser rápido y adaptable, lo que lo hace ideal para el desarrollo de novelas visuales con historias interactivas.
+        </p>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <h4>🌸 Script compatible</h4>
+        <p>
+          El motor es compatible con los lenguajes de desarrollo HTML, CSS, JavaScript y Node.js.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light text-center" id="menu">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Ten todo el control</h2>
+    <div class="d-flex justify-content-center flex-wrap" data-aos="zoom-in">
+      <button class="btn btn-sakura" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">Interfaz</button>
+      <button class="btn btn-sakura" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">Script de logica</button>
+      <button class="btn btn-sakura" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">Motor del juego</button>
+    </div>
+  </div>
+  <div class="collapse container" id="collapseExample1">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    </div>
+  </div>
+  <div class="collapse container" id="collapseExample2">
+    <div class="card card-body">
+      Some2 placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    </div>
+  </div>
+  <div class="collapse container" id="collapseExample3">
+    <div class="card card-body">
+      Some3 prueva placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    </div>
+  </div>
+</section>
+
+<section class="section text-center" id="gallery">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Galeria de Sakura Engine</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-up"><img src="https://via.placeholder.com/300x180" class="img-fluid rounded"></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><img src="https://via.placeholder.com/300x180" class="img-fluid rounded"></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><img src="https://via.placeholder.com/300x180" class="img-fluid rounded"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light text-center" id="testimonials">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Comentarios</h2>
+    <div class="testimonial" data-aos="fade-up">
+      <img src="https://i.pinimg.com/736x/1e/04/fd/1e04fd17f397b0513736628602fd9583.jpg" width="64" class="mb-3">
+      <p><strong>Takeshi</strong>：¡Gracias a Sakura Engine, la novela visual con la que había soñado ahora está completa!</p>
+    </div>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://sharedp.com/wp-content/uploads/2024/09/foto-de-perfil-mujer-anime-1024x1024.jpg" width="64" class="mb-3">
+      <p><strong>Akari</strong>：Ahora si tengo todo el control y puedo crear el juego perfecto como yo quiero.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section text-center" id="download">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Descargar el motor Sakura</h2>
+    <p data-aos="fade-up">Ahora mismo, comencemos tu historia.</p>
+    <a href="#" class="btn btn-sakura" data-aos="zoom-in">Windows 10/11</a>
+  </div>
+</section>
+
+<section class="section bg-light text-center" id="roadmap">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Versiones en desarrollo</h2>
+    <ul class="list-unstyled" data-aos="fade-up">
+      <li>✅ Versión 1.0 lanzada</li>
+      <li>🛠 Versión 1.1 - Se planea agregar nuevas funciones</li>
+      <li>🔜 Versión 2.0 - Soporte para animación de personajes</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section text-center" id="community">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Comunidad</h2>
+    <p data-aos="fade-up">Juntos con desarrolladores apasionados, creemos una hermosa historia.</p>
+    <a href="#" class="btn btn-outline-dark">Unirse a Discord</a>
+  </div>
+</section>
+
+<footer class="text-center">
+  <div class="container">
+    <p>Sakura Engine visual Novel © 2025 - Desarrollado para amantes de las novelas visuales.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

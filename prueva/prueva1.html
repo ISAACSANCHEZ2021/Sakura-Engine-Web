@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桜エンジン | ノベルゲーム制作ツール</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background: #F2E8D5;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #BF634E;
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .sakura {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .hero {
+      background: linear-gradient(rgba(242, 232, 213, 0.9), rgba(242, 232, 213, 0.7)), url('sakura emgin.png') center/cover;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      color: #402D1C;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      color: #8C3730;
+    }
+    .btn-main {
+      background-color: #D94A3D;
+      color: white;
+      border: none;
+    }
+    .testimonial {
+      background: #fff;
+      border-left: 5px solid #BF634E;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .toggle-lang {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+    audio {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas class="sakura"></canvas>
+  <div class="toggle-lang">
+    <button class="btn btn-outline-dark" onclick="toggleLang()">🌐 日本語 / English</button>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    あなたのブラウザはaudio要素をサポートしていません。
+  </audio>
+
+  <header>
+    <h1>桜エンジン</h1>
+    <nav class="nav">
+      <a class="nav-link text-white" href="#">新しい物語</a>
+      <a class="nav-link text-white" href="#">ロード</a>
+      <a class="nav-link text-white" href="#">クレジット</a>
+      <a class="nav-link text-white" href="#gallery">ギャラリー</a>
+      <a class="nav-link text-white" href="#roadmap">ロードマップ</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h1>夢のようなノベルを創ろう</h1>
+    <p>桜エンジンは、美しく簡単にビジュアルノベルを作るためのツールです。</p>
+    <a href="#download" class="btn btn-main btn-lg mt-3">🌸 無料で始める</a>
+  </section>
+
+  <section class="container py-5" id="gallery">
+    <h2 data-aos="fade-right">🌸 ギャラリー</h2>
+    <div class="row">
+      <div class="col-md-4"><img src="mockup1.png" class="img-fluid rounded" alt="mockup"></div>
+      <div class="col-md-4"><img src="mockup2.png" class="img-fluid rounded" alt="mockup"></div>
+      <div class="col-md-4"><img src="mockup3.png" class="img-fluid rounded" alt="mockup"></div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <h2 data-aos="fade-left">💬 ユーザーの声</h2>
+    <div class="testimonial">
+      <img src="avatar1.jpg" class="avatar me-3" alt="Avatar"> 「桜エンジンで初めてのゲームを作りました。本当に簡単で楽しいです！」
+    </div>
+    <div class="testimonial">
+      <img src="avatar2.jpg" class="avatar me-3" alt="Avatar"> 「デザインが美しく、プロジェクトが生きている感じがします。」
+    </div>
+  </section>
+
+  <section class="container py-5" id="roadmap">
+    <h2 data-aos="fade-up">🗺️ ロードマップ</h2>
+    <ul>
+      <li>✔️ バージョン1.0 リリース済</li>
+      <li>🚧 プラグインサポート追加中</li>
+      <li>📱 モバイル向け対応開発予定</li>
+    </ul>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 桜エンジン | ノベルゲーム開発を、もっと楽しく。</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    function toggleLang() {
+      alert('機能はまだ実装されていません。準備中です。');
+    }
+
+    // Sakura effect (simple version)
+    const canvas = document.querySelector('.sakura');
+    const ctx = canvas.getContext('2d');
+    let petals = [];
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function Petal() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.radius = Math.random() * 4 + 1;
+      this.speed = Math.random() * 1 + 0.5;
+      this.wind = Math.random() * 1 - 0.5;
+      this.draw = function() {
+        ctx.beginPath();
+        ctx.fillStyle = '#FFB7C5';
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function createPetals(count) {
+      for (let i = 0; i < count; i++) {
+        petals.push(new Petal());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      petals.forEach(p => {
+        p.y += p.speed;
+        p.x += p.wind;
+        if (p.y > canvas.height) p.y = 0;
+        if (p.x > canvas.width || p.x < 0) p.x = Math.random() * canvas.width;
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    createPetals(60);
+    animate();
+  </script>
+</body>
+</html>

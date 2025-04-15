@@ -1,0 +1,84 @@
+body
+{
+    background-color: #F2E8D5;
+    font-family: 'Segoe UI', sans-serif;
+    color: #402D1C;
+    overflow-x: hidden;
+}
+.navbar 
+{
+    background-color: #BF634E;
+}
+.navbar-brand, .nav-link
+{
+    color: #fff !important;
+    font-weight: bold;
+}
+.hero
+{
+    background: url('../../image/sakura_emgin.png') no-repeat center center;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: end;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    position: relative;
+}
+  .hero-content {
+    background: rgba(255, 255, 255, 0);/* anterior background: rgba(255,255,255,0.85);*/
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .btn-sakura {
+    background-color: #D94A3D;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    border-bottom: 3px solid #8C3730;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  footer {
+    background-color: #402D1C;
+    color: #fff;
+    padding: 2rem 0;
+  }
+  /* Sakura falling animation */
+  .sakura {
+    position: fixed;
+    top: -50px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../image/pngtree-sakura-flowers-commercial-elements-blossomsflowerplantdecorative-materialflatelementdesign-png-image_573235-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-50px) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+  }
+  .testimonial {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  .a1 {
+    margin: 1rem auto;
+  }
+  .ofertas{
+    width: 70%;
+    height: 54px;
+    margin: auto;
+    background-color: white;
+  }

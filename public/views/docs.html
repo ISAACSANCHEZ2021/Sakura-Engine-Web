@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドキュメンテーション | サクラノベルエンジン</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #F2E8D5;
+      color: #402D1C;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background-color: #BF634E;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .section-title {
+      color: #D94A3D;
+      margin-top: 3rem;
+    }
+    .doc-section {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    footer {
+      background-color: #8C3730;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .nav-link.active {
+      font-weight: bold;
+      color: #D94A3D !important;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 data-aos="fade-down">📘 サクラノベルエンジン ドキュメント</h1>
+  <p data-aos="fade-up">ビジュアルノベルゲーム制作のための究極のエンジン</p>
+</header>
+
+<div class="container mt-4">
+  <ul class="nav nav-tabs mb-4" id="docTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab">導入</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="structure-tab" data-bs-toggle="tab" data-bs-target="#structure" type="button" role="tab">プロジェクト構造</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="commands-tab" data-bs-toggle="tab" data-bs-target="#commands" type="button" role="tab">スクリプトコマンド</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="assets-tab" data-bs-toggle="tab" data-bs-target="#assets" type="button" role="tab">アセット管理</button>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane fade show active doc-section" id="intro" role="tabpanel">
+      <h2 class="section-title">導入</h2>
+      <p>サクラノベルエンジンは、HTML/CSS/JSベースで動作するビジュアルノベルゲーム開発エンジンです。簡単な構文で感動的な物語を作成できます。</p>
+      <ol>
+        <li>最新版をダウンロード</li>
+        <li>任意のWebサーバーに展開</li>
+        <li>script.txtを編集してストーリーを追加</li>
+      </ol>
+    </div>
+
+    <div class="tab-pane fade doc-section" id="structure" role="tabpanel">
+      <h2 class="section-title">プロジェクト構造</h2>
+      <pre>
+📁 sakura-novel/
+ ├── index.html
+ ├── js/
+ │    └── engine.js
+ ├── assets/
+ │    ├── images/
+ │    └── music/
+ └── script.txt
+      </pre>
+      <p>この構造に従えば、エンジンがスムーズに動作します。</p>
+    </div>
+
+    <div class="tab-pane fade doc-section" id="commands" role="tabpanel">
+      <h2 class="section-title">スクリプトコマンド</h2>
+      <ul>
+        <li><strong>show bg [画像]</strong> – 背景画像の表示</li>
+        <li><strong>play music [音楽]</strong> – BGMの再生</li>
+        <li><strong>say [名前]: [セリフ]</strong> – キャラクターの会話</li>
+        <li><strong>choice [選択肢1]|[選択肢2]</strong> – プレイヤーの選択</li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade doc-section" id="assets" role="tabpanel">
+      <h2 class="section-title">アセット管理</h2>
+      <p>画像ファイルは <code>assets/images/</code> に、音楽ファイルは <code>assets/music/</code> に格納してください。</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 サクラノベルエンジン株式会社 | SakuraNovelEngine.jp</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakura Emgine - ビジュアルノベルエンジン</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #F2E8D5;
+      font-family: 'Segoe UI', sans-serif;
+      color: #402D1C;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #BF634E;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('../image/sakura\ emgin.png') no-repeat center center;
+      background-size: cover;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .hero-content {
+      background: rgba(255,255,255,0.85);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .btn-sakura {
+      background-color: #D94A3D;
+      color: #fff;
+      border-radius: 2rem;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+    }
+    .section {
+      padding: 4rem 0;
+    }
+    .section-title {
+      font-size: 2rem;
+      border-bottom: 3px solid #8C3730;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #402D1C;
+      color: #fff;
+      padding: 2rem 0;
+    }
+    /* Sakura falling animation */
+    .sakura {
+      position: fixed;
+      top: -50px;
+      width: 20px;
+      height: 20px;
+      background-image: url('../image/pngtree-sakura-flowers-commercial-elements-blossomsflowerplantdecorative-materialflatelementdesign-png-image_573235-removebg-preview.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+    .testimonial {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    audio {
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sakura petals -->
+<script>
+  for (let i = 0; i < 30; i++) {
+    let sakura = document.createElement('div');
+    sakura.classList.add('sakura');
+    sakura.style.left = Math.random() * 100 + 'vw';
+    sakura.style.animationDuration = (5 + Math.random() * 5) + 's';
+    sakura.style.opacity = Math.random();
+    document.body.appendChild(sakura);
+  }
+</script>
+
+<!-- Music player -->
+<audio controls loop autoplay>
+  <source src="https://cdn.pixabay.com/audio/2022/10/27/audio_04ae4d6829.mp3" type="audio/mpeg">
+  お使いのブラウザはオーディオタグに対応していません。
+</audio>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">さくらエンジン</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#features">特徴</a></li>
+        <li class="nav-item"><a class="nav-link" href="#download">ダウンロード</a></li>
+        <li class="nav-item"><a class="nav-link" href="#community">コミュニティ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">メニュー</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container text-center">
+    <div class="hero-content" data-aos="fade-up">
+      <h1 class="display-4">ようこそ、さくらエンジンへ</h1>
+      <p class="lead">まるでアニメのようなビジュアルノベルを、誰でも簡単に。</p>
+      <a href="#download" class="btn btn-sakura">今すぐダウンロード</a>
+      <a href="#docs" class="btn btn-outline-dark">ドキュメント</a>
+    </div>
+  </div>
+</header>
+
+<section class="section text-center" id="features">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">主な特徴</h2>
+    <div class="row mt-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <h4>🎨 アニメ風スタイル</h4>
+        <p>美しいビジュアルとインタラクションで、物語が生きる。</p>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <h4>⚙ 軽量エンジン</h4>
+        <p>Electronや最新ブラウザで快適に動作。</p>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <h4>🌸 簡単スクリプト</h4>
+        <p>まるで脚本を書くように、ストーリーを自由に構築。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light text-center" id="menu">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">ノベルメニュー</h2>
+    <div class="d-flex justify-content-center flex-wrap" data-aos="zoom-in">
+      <button class="btn btn-sakura">新しい物語</button>
+      <button class="btn btn-sakura">ロード</button>
+      <button class="btn btn-sakura">スタッフ紹介</button>
+    </div>
+  </div>
+</section>
+
+<section class="section text-center" id="gallery">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">ギャラリー</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-up"><img src="https://via.placeholder.com/300x180" class="img-fluid rounded"></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><img src="https://via.placeholder.com/300x180" class="img-fluid rounded"></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><img src="https://via.placeholder.com/300x180" class="img-fluid rounded"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light text-center" id="testimonials">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">ユーザーの声</h2>
+    <div class="testimonial" data-aos="fade-up">
+      <img src="https://i.imgur.com/8QfR1LA.png" width="64" class="mb-3">
+      <p><strong>あかり</strong>：「さくらエンジンのおかげで、夢だったビジュアルノベルが完成しました！」</p>
+    </div>
+    <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://i.imgur.com/8QfR1LA.png" width="64" class="mb-3">
+      <p><strong>たけし</strong>：「スクリプトが簡単で、すぐに使いこなせました。」</p>
+    </div>
+  </div>
+</section>
+
+<section class="section text-center" id="download">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">さくらエンジンをダウンロード</h2>
+    <p data-aos="fade-up">今すぐあなたの物語を始めましょう。</p>
+    <a href="#" class="btn btn-sakura" data-aos="zoom-in">Windows版ダウンロード</a>
+  </div>
+</section>
+
+<section class="section bg-light text-center" id="roadmap">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">ロードマップ</h2>
+    <ul class="list-unstyled" data-aos="fade-up">
+      <li>✅ バージョン1.0 リリース済み</li>
+      <li>🛠 バージョン1.1 - シーンマネージャ追加予定</li>
+      <li>🔜 バージョン2.0 - キャラクターアニメーション対応</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section text-center" id="community">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">コミュニティ</h2>
+    <p data-aos="fade-up">情熱を持つ開発者と一緒に、素敵な物語を創ろう。</p>
+    <a href="#" class="btn btn-outline-dark">Discordに参加</a>
+  </div>
+</section>
+
+<footer class="text-center">
+  <div class="container">
+    <p>さくらエンジン © 2025 - ビジュアルノベル愛好家のために開発。</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

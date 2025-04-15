@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 開発者パネル | サクラノベルエンジン</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #F2E8D5;
+      color: #402D1C;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .dashboard-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .dashboard-section {
+      margin-top: 2rem;
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    .log-console {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      height: 150px;
+      overflow-y: auto;
+    }
+    .project-table th, .project-table td {
+      vertical-align: middle;
+    }
+    footer {
+      background-color: #8C3730;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+  <h2 class="mb-4">🌸 開発者パネル</h2>
+  <p>ようこそ、開発者さん！ここではエンジンの内部管理やアップロード、バグ報告が可能です。</p>
+
+  <div class="dashboard-section">
+    <h4>🔧 ビルド情報</h4>
+    <ul class="list-group mb-4">
+      <li class="list-group-item">ステータス: <strong>安定</strong></li>
+      <li class="list-group-item">最新アップデート: <strong>v1.1.0-beta</strong></li>
+      <li class="list-group-item">報告されたバグ: <strong>3 件</strong></li>
+    </ul>
+  </div>
+
+  <div class="dashboard-section">
+    <h4>📂 ファイル管理</h4>
+    <form onsubmit="uploadFile(event)">
+      <div class="mb-3">
+        <input type="file" class="form-control" id="devUpload">
+      </div>
+      <button class="btn btn-primary">アップロード</button>
+    </form>
+  </div>
+
+  <div class="dashboard-section">
+    <h4>📈 使用統計</h4>
+    <p>ユーザー: <strong>1,203 人</strong></p>
+    <p>累計ダウンロード: <strong>58,473 回</strong></p>
+  </div>
+
+  <div class="dashboard-section">
+    <h4>📋 プロジェクト一覧</h4>
+    <table class="table table-striped project-table">
+      <thead>
+        <tr><th>プロジェクト名</th><th>バージョン</th><th>最終更新日</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>『花の記憶』</td><td>v1.0.2</td><td>2025/04/05</td></tr>
+        <tr><td>『月光の道』</td><td>v0.9.8</td><td>2025/03/27</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="dashboard-section">
+    <h4>💻 ログ出力</h4>
+    <div id="logConsole" class="log-console">
+      [INFO] Sakura Engine 起動しました...<br>
+      [INFO] ダッシュボード表示中。<br>
+    </div>
+  </div>
+
+  <div class="dashboard-section">
+    <h4>🧑‍💼 担当者コメント</h4>
+    <div class="d-flex align-items-center">
+      <img src="https://i.pravatar.cc/100?u=dev1" class="avatar" alt="avatar">
+      <blockquote class="mb-0">「このエンジンは柔軟で拡張性が高いので、次世代のノベル体験を可能にします。」</blockquote>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 サクラノベルエンジン | Sakura Developers</p>
+</footer>
+
+<script>
+  function uploadFile(event) {
+    event.preventDefault();
+    const fileInput = document.getElementById("devUpload");
+    if (fileInput.files.length > 0) {
+      const msg = "[UPLOAD] '" + fileInput.files[0].name + "' をアップロードしました。";
+      alert(msg + "（※これはシミュレーションです）");
+      document.getElementById("logConsole").innerHTML += msg + "<br>";
+    } else {
+      alert("ファイルを選択してください。");
+    }
+  }
+</script>
+
+</body>
+</html>
