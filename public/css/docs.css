@@ -1,0 +1,32 @@
+body {
+    background-color: #F2E8D5;
+    color: #402D1C;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  header {
+    background-color: #BF634E;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .section-title {
+    color: #D94A3D;
+    margin-top: 3rem;
+  }
+  .doc-section {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  footer {
+    background-color: #8C3730;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  .nav-link.active {
+    font-weight: bold;
+    color: #D94A3D !important;
+  }

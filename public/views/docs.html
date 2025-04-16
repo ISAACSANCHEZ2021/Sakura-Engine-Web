@@ -1,97 +1,96 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ドキュメンテーション | サクラノベルエンジン</title>
+  <title>Documentacion - Sakura Engine visaul Novel</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #F2E8D5;
-      color: #402D1C;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    header {
-      background-color: #BF634E;
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-    }
-    .section-title {
-      color: #D94A3D;
-      margin-top: 3rem;
-    }
-    .doc-section {
-      background-color: white;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
-    }
-    footer {
-      background-color: #8C3730;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    .nav-link.active {
-      font-weight: bold;
-      color: #D94A3D !important;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/docs.css">
 </head>
 <body>
 
 <header>
-  <h1 data-aos="fade-down">📘 サクラノベルエンジン ドキュメント</h1>
-  <p data-aos="fade-up">ビジュアルノベルゲーム制作のための究極のエンジン</p>
+  <h1 data-aos="fade-down">📘 Documentacion de Sakura Engine visual Novel</h1>
+  <p data-aos="fade-up">El motor definitivo para la creación de juegos de novela visual</p>
 </header>
 
 <div class="container mt-4">
   <ul class="nav nav-tabs mb-4" id="docTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab">導入</button>
+      <button class="nav-link active" id="intro-tab" data-bs-toggle="tab" data-bs-target="#intro" type="button" role="tab">Introduction</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="structure-tab" data-bs-toggle="tab" data-bs-target="#structure" type="button" role="tab">プロジェクト構造</button>
+      <button class="nav-link" id="structure-tab" data-bs-toggle="tab" data-bs-target="#structure" type="button" role="tab">Estructura del proyecto</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="commands-tab" data-bs-toggle="tab" data-bs-target="#commands" type="button" role="tab">スクリプトコマンド</button>
+      <button class="nav-link" id="commands-tab" data-bs-toggle="tab" data-bs-target="#commands" type="button" role="tab">Comandos de script</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="assets-tab" data-bs-toggle="tab" data-bs-target="#assets" type="button" role="tab">アセット管理</button>
+      <button class="nav-link" id="assets-tab" data-bs-toggle="tab" data-bs-target="#assets" type="button" role="tab">Gestión de activos</button>
     </li>
   </ul>
 
   <div class="tab-content">
     <div class="tab-pane fade show active doc-section" id="intro" role="tabpanel">
-      <h2 class="section-title">導入</h2>
-      <p>サクラノベルエンジンは、HTML/CSS/JSベースで動作するビジュアルノベルゲーム開発エンジンです。簡単な構文で感動的な物語を作成できます。</p>
+      <h2 class="section-title">Introduction</h2>
+      <p>El motor de novela visual Sakura es un motor de desarrollo de juegos de novela visual que funciona con HTML/CSS/JS/nodejs. Puedes crear historias emotivas con una sintaxis sencilla.</p>
+      <h5>Pre-requisitos</h5>
       <ol>
-        <li>最新版をダウンロード</li>
-        <li>任意のWebサーバーに展開</li>
-        <li>script.txtを編集してストーリーを追加</li>
+        <li>Descargar <a href="https://code.visualstudio.com">Visual Studio codec</a></li>
+        <li>Descargar <a href="https://nodejs.org/en">nodejs</a></li>
+        <li>Descargar <a href="#">Sakura Engine visual Novel</a> (GitHub)</li>
+        <li>Descargar <a href="#">Sakura Engine visual Novel</a> (Paquete completo)</li>
+      </ol>
+      <H5>Instalacion</H5>
+      <ol>
+        <li>Instalamos el editor de codigo visual studio codec en nuestro pc</li>
+        <li>instalamos el nodejs y segimos los pasos del intalador</li>
+        <li>Hay dos formas de Instalar el motor sakura engine visual novel la pirmera puedes descargar el archivo por <strong>GitHub</strong> o <strong>paquete completo</strong></li>
+      </ol>
+      <h5>Atencion</h5>
+      <p>Antes de seguir con la instalacion lo mas importante tienes que saber es programar por lo menos lo basico
+        y si no sabes <strong>No te preocupes</strong> es un lenguaje facil que debemos aprender, Sakura Engine visual Novel
+        utiliza un lenguaje facil de aprender para interfaz utiliza <strong>Html/css/</strong> y para la logica <strong>Js</strong>
+        y para el backend <strong>nodejs</strong> no te olvide que Sakura Engine visual Novel esta contruida en electron.
+      </p>
+      <h5>Preparar todo para crear tu juego</h5>
+      <ol>
+        <li>creamos una carpeta donde bamos a clonar el repositorio.</li>
+        <li>abrimos con visual estudio codec la carpeta que tu creaste.</li>
+        <li>abre la terminal de visual codec y escribe <strong>npm init</strong> para clonar el repositorio de github</li>
+        <li>Luego abre la carpeta clonada con el mismo visual studio</li>
+        <li>Ya estas listo para crear tu juego</li>
+      </ol>
+      <h5>opcion con paquete completo</h5>
+      <ol>
+        <li>Descarga el archivo completo del link.</li>
+        <li>Descomprime el archivo.</li>
+        <li>Abre el archivo descomprimido en visual studio codec.</li>
+        <li>ya podras crear tus juegos sin problema.</li>
       </ol>
     </div>
 
     <div class="tab-pane fade doc-section" id="structure" role="tabpanel">
-      <h2 class="section-title">プロジェクト構造</h2>
+      <h2 class="section-title">Estrutura del proyecto</h2>
       <pre>
-📁 sakura-novel/
- ├── index.html
- ├── js/
- │    └── engine.js
- ├── assets/
- │    ├── images/
- │    └── music/
- └── script.txt
+📁 SakuraEngine/
+ ├── 📁 audio
+ ├── 📁 config
+ ├── 📁 game
+ ├── 📁 gui
+ ├── 📁 image
+ ├── 📁 node_modules
+ ├── 📁 video
+ ├── package
+ ├── package_lock
+ └── sakura.js
       </pre>
-      <p>この構造に従えば、エンジンがスムーズに動作します。</p>
+      <p>Siguiendo esta estructura, el motor funcionará sin problemas.</p>
     </div>
 
     <div class="tab-pane fade doc-section" id="commands" role="tabpanel">
-      <h2 class="section-title">スクリプトコマンド</h2>
+      <h2 class="section-title">Comandos de Script</h2>
       <ul>
         <li><strong>show bg [画像]</strong> – 背景画像の表示</li>
         <li><strong>play music [音楽]</strong> – BGMの再生</li>
@@ -101,14 +100,21 @@
     </div>
 
     <div class="tab-pane fade doc-section" id="assets" role="tabpanel">
-      <h2 class="section-title">アセット管理</h2>
-      <p>画像ファイルは <code>assets/images/</code> に、音楽ファイルは <code>assets/music/</code> に格納してください。</p>
+      <h2 class="section-title">Gestion de activos del juego</h2>
+      <p>Los archivos de imagen deben almacenarse en <code>images/</code></p>
+      <p>Los archivos de música deben almacenarse en <code>music/</code></p>
+      <p>Los archivos de video deben almacenarse en <code>video/</code></p>
+      <h2 class="section-title">Gestion de activos del gui</h2>
+      <p>Los archivos de imagen de gui almacenarse en <code>gui/</code></p>
+      <p>Los archivos de audio de gui almacenarse en <code>gui/audio/</code></p>
+      <p>Los archivos de video de gui almacenarse en <code>gui/video/</code></p>
+      <h6>En estas carpetas principales debes guardar los activos para ser ordenado hay adentro de estas carpeta puedes crear tus carpetas y archivos.</h6>
     </div>
   </div>
 </div>
 
 <footer>
-  <p>© 2025 サクラノベルエンジン株式会社 | SakuraNovelEngine.jp</p>
+  <p>Sakura Engine visual Novel © 2025 - Desarrollado para amantes de las novelas visuales.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
